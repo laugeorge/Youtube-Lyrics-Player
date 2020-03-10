@@ -1,6 +1,6 @@
-//Spotify Access Token
+/*****************************SPOTIFY ACCESS TOKEN *****************************/
 let spotifyToken =
-  "BQDxiey7FOT5gc1Lcs17cHO0Rs2Di6c2HiizyWhCYNXkYPoXAL2_B--CUK6pJuFN-tjfNUf5KWg-lBs9m1rZpiJrhoD6Nh_cQWF0jOrFPohEgH5gtOCsSJj6hbbgcI7ZYRId46brK4o8IKVuTlpSEhTYsJMgiZ6MQf4hjwk";
+  "BQD59Vb3put3RMyeW3o3Ef3MYMWphIAMmiSW_AFxJq3LWtNYdF_W3_qV581zoZPY6qxq5010_SvI-A_Bk0-A5REfC_bQGCOjR5mmBuoqGQB6gi-fM-hQ3SKq7juk-ixN9mN3XGpqvMk0wdXEOReAz2fez7X_jk5pQw";
 
 //function to check if an element is empty
 function isEmpty(element) {
@@ -228,8 +228,8 @@ window.onSpotifyWebPlaybackSDKReady = () => {
       );
     });
 
-    //youtube API
-    var gapikey = "AIzaSyCtrSJsQgGD2saeFM4rT1QzhEkspUUERIY";
+    /******************** YOUTUBE API ********************/
+    var gapikey = "AIzaSyB1JiQnH_zD7lC_CkLSNmwnY1-ONkoUScI";
     var URL = "https://www.googleapis.com/youtube/v3/search";
     let q = $(this).data("track") + " " + $(this).data("artist");
 
