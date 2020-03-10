@@ -1,0 +1,679 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+body {
+  font-family: "Fredoka One", cursive !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url("../headphones.png") no-repeat;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  background-size: cover;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+iframe:first-of-type {
+  margin-bottom: 10px;
+}
+
+
+h1 {
+  font-family: "Fredoka One", cursive !important;
+  text-align: center;
+}
+
+input {
+  width: 25%;
+  height: 50px;
+  font-size: 2em;
+  text-align: center;
+}
+
+button {
+  height: 45px;
+  font-size: 1.25em;
+  border-radius: 2%;
+  outline: none !important;
+  box-shadow: none;
+}
+
+#navBar button {
+  width: 150px;
+  border: 1px solid #ef5526 !important;
+}
+
+button:hover,
+i:hover {
+  color: #ef5526;
+}
+
+#searchArea {
+  text-align: center;
+}
+
+img {
+  float: left;
+  margin-right: 10%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+
+}
+
+a,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+p {
+  margin-right: 5%;
+  font-family: sans-serif;
+}
+
+#noLyrics {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 200px auto 0;
+  font-family: "Fredoka One", cursive !important;
+}
+
+#noResults {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin: 275px auto 0;
+  font-family: "Fredoka One", cursive !important;
+}
+
+#lyrics {
+  overflow: auto;
+}
+
+#lyricResult {
+  margin-left: 90px;
+}
+
+.favourited {
+  color: #ef5526;
+}
+
+.ajaxContent {
+  text-align: center;
+}
+
+#login,
+#userProfile {
+  margin-right: 10px;
+}
+
+.row {
+  height: calc(100vh - 96px);
+}
+
+#userbuttons button {
+  display: inline-flex;
+  width: 30%;
+  text-align: center;
+}
+
+#searchInput {
+  width: 350px;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: #ef5526;
+  color: white;
+  border: 1px solid #ef5526;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover,
+#logout:active,
+#userProfile:active,
+#login:active,
+#signup:active,
+#searchButton:active {
+  background-color: #c2e4d3;
+  color: #ef5526;
+}
+
+
+.displayLyrics:first-of-type {
+  margin-top: 20px;
+}
+
+
+#spotify,
+#youtube,
+#lyrics {
+  text-align: center;
+}
+
+#spotify .controlButton,
+#youtube .controlButton,
+#lyrics .controlButton {
+  color: #000;
+  margin-top: 10px;
+}
+
+#spotify .controlButton:hover,
+#youtube .controlButton:hover,
+#lyrics .controlButton:hover {
+  color: #ef5526;
+}
+
+#middleContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.navbar {
+  height: 96px;
+}
+
+form {
+  margin-left: 100px;
+}
+
+.searchResult {
+  margin-top: 15px;
+}
+
+.projectName {
+  font-size: 32px;
+}
+
+.play:hover,
+.pause:hover {
+  transform: scale(1.1);
+}
+
+.playArtist {
+  font-size: 1.75rem;
+}
+
+.playTrack {
+  font-size: 2rem;
+  display: block;
+  margin-top: 30px;
+}
+
+.displayLyrics {
+  letter-spacing: 2px;
+  line-height: 175%;
+  font-size: 1.5rem;
+  font-family: "Fredoka One", cursive !important;
+  font-weight: 700;
+}
+
+/* CSS FOR THE PLAYER BAR */
+
+#nowPlayingContainer {
+  width: 33%;
+  background-color: #343a40;
+  bottom: 0;
+  left: 0;
+  min-width: 250px;
+  position: fixed;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#nowPlayingBar {
+  height: 120px;
+  padding: 16px;
+  box-sizing: border-box;
+  /* THIS */
+  justify-content: space-between;
+}
+
+#nowPlayingArtist,
+#nowPlayingVolume {
+  width: 30%;
+  min-width: 180px;
+}
+
+#nowPlayingVolume {
+  position: relative;
+  margin-top: 30px;
+}
+
+#nowPlayingControls {
+  width: 40%;
+  max-width: 700px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nowPlayingBar .content {
+  width: 100%;
+  height: 100%;
+  min-width: 180px;
+}
+
+.playerControls .playerButtons {
+  margin: 10px auto;
+  display: table;
+}
+
+.controlButton {
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+  color: #a0a0a0;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.progressTime {
+  color: #a0a0a0;
+  font-size: 12px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 13px;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.progressBarBackground {
+  background-color: #404040;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.actualProgress {
+  background-color: #a0a0a0;
+  height: 4px;
+  width: 0;
+  border-radius: 2px;
+}
+
+.progressBarContainer .progressBar {
+  margin-top: 5px;
+}
+
+.progressBarContainer {
+  margin-top: 25px;
+}
+
+#nowPlayingArtist #albumImage {
+  height: 100%;
+  max-width: 125px;
+  margin-right: 25px;
+  float: left;
+  background-size: cover;
+}
+
+.trackInformation {
+  margin-top: -5px;
+}
+
+.trackInformation .trackName {
+  margin: 6px 0;
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.artistName span {
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+
+.volumeBar {
+  width: 180px;
+  position: absolute;
+  right: 30px;
+}
+
+.volumeBar .progressBar {
+  width: 125px;
+}
+
+/* login/register */
+
+/*
+ *
+ * login-register modal
+ * Autor: Creative Tim
+ * Web-autor: creative.tim
+ * Web script: http://creative-tim.com
+ * 
+ */
+
+/*  Shake animation  */
+
+@charset "UTF-8";
+
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.hinges {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.animated.snail {
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+
+@-moz-keyframes shake {
+
+  0%,
+  100% {
+    -moz-transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -moz-transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -moz-transform: translateX(10px);
+  }
+}
+
+@-o-keyframes shake {
+
+  0%,
+  100% {
+    -o-transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -o-transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -o-transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+}
+
+.login .modal-dialog {
+  width: 350px;
+}
+
+.login .modal-content {
+  text-align: center;
+}
+
+
+
+.login .modal-footer {
+  border-top: 0;
+  margin-top: 0px;
+  padding: 10px 20px 20px;
+}
+
+.login .modal-header {
+  border: 0 none;
+  padding: 15px 15px 15px;
+  /*     padding: 11px 15px; */
+}
+
+
+
+.login .division {
+  float: none;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.login .division .line {
+  border-top: 1px solid #DFDFDF;
+  position: absolute;
+  top: 10px;
+  width: 34%;
+}
+
+.login .division .line.l {
+  left: 0;
+}
+
+.login .division .line.r {
+  right: 0;
+}
+
+.login .division span {
+  color: #424242;
+  font-size: 17px;
+}
+
+
+.login .forgot a,
+.login .forgot {
+  color: #797979;
+  margin-left: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.login .forgot a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.login .forgot a:hover {
+  color: #ef5526;
+}
+
+.login .btn-login,
+.registerBox .btn-register {
+  background-color: #ef5526;
+  border-color: #ef5526;
+  border-width: 0;
+  color: #FFFFFF;
+  display: block;
+  margin: auto;
+  padding: 15px 50px;
+  width: 100%;
+  position: relative;
+  right: 45px;
+}
+
+.login .btn-login:hover,
+.registerBox .btn-register:hover {
+  background-color: #df4010;
+  color: #FFFFFF;
+}
+
+.login .form-control {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+  color: #FFFFFF;
+}
+
+.login .form-control:hover {
+  background-color: rgba(0, 0, 0, .16);
+}
+
+.login .form-control:focus {
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+  background-color: rgba(0, 0, 0, 0.23);
+  color: #FFFFFF;
+}
+
+.login .box .form input[type="text"],
+.login .box .form input[type="password"] {
+  border-radius: 3px;
+  border: none;
+  color: #333333;
+  font-size: 16px;
+  height: 46px;
+  margin-bottom: 5px;
+  padding: 13px 12px;
+  width: 100%;
+  position: relative;
+  right: 45px;
+}
+
+
+@media (max-width:400px) {
+  .login .modal-dialog {
+    width: 100%;
+  }
+}
+
+.big-login,
+.big-register {
+  background-color: #ef5526;
+  color: #FFFFFF;
+  border-radius: 7px;
+  border-width: 2px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  padding: 16px 60px;
+  transition: all 0.3s ease 0s;
+}
+
+.big-login:hover {
+  background-color: #df4010;
+  color: #FFFFFF;
+}
+
+.big-register {
+  background-color: rgba(0, 0, 0, .0);
+  color: #ef5526;
+  border-color: #ef5526;
+}
+
+.big-register:hover {
+  border-color: #df4010;
+  color: #df4010;
+}
+
+.modal-title {
+  margin-left: 182px;
+  position: relative;
+  right: 100px;
+}
+
+.modal-title::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+  border-top: 2px solid #ef5526;
+}
+
+#userEmail {
+  position: relative;
+  top: 48px;
+  right: 50px;
+  font-size: 300px;
+}
